@@ -1,0 +1,167 @@
+/* ==========================================================
+   VIVEKANANDA MISSION INSTITUTE
+   PRINT.CSS
+========================================================== */
+
+@page{
+
+    size:A4 portrait;
+
+    margin:8mm;
+
+}
+
+html,
+body{
+
+    width:210mm;
+
+    background:#ffffff;
+
+}
+
+/* Hide UI */
+
+header,
+.topbar,
+.dashboard,
+.toolbar,
+footer,
+.card-actions,
+button{
+
+    display:none !important;
+
+}
+
+/* Card Container */
+
+#cardContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,86mm);
+
+    justify-content:center;
+
+    column-gap:8mm;
+
+    row-gap:10mm;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+/* PVC Card */
+
+.id-card{
+
+    width:86mm !important;
+
+    height:54mm !important;
+
+    margin:0;
+
+    padding:0;
+
+    border:1px solid #999;
+
+    border-radius:4mm;
+
+    overflow:hidden;
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+    box-shadow:none !important;
+
+    transform:none !important;
+
+}
+
+/* Remove Hover */
+
+.id-card:hover{
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/* Remove Shine */
+
+.id-card::before{
+
+    display:none;
+
+}
+
+/* Keep Colors */
+
+*{
+
+    -webkit-print-color-adjust:exact;
+
+    print-color-adjust:exact;
+
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* QR */
+
+.qr-box{
+
+    width:22mm;
+
+    height:22mm;
+
+}
+
+.qr-box img,
+.qr-box canvas{
+
+    width:20mm !important;
+
+    height:20mm !important;
+
+}
+
+/* Photo */
+
+.photo-box{
+
+    width:20mm;
+
+    height:25mm;
+
+}
+
+/* Avoid Splitting */
+
+.card-front,
+.card-back{
+
+    page-break-inside:avoid;
+
+}
+
+/* Last Page */
+
+body{
+
+    page-break-after:auto;
+
+}
